@@ -4,7 +4,7 @@ def main():
         '"All\'s well that ends better." - Hamfast Gamgee\n'
     )
 
-    with opem("lotr_quotes.txt", "w") as file:
+    with open("lotr_quotes.txt", "w") as file:
         file.write(content)
 
 if __name__ == "__main__":
