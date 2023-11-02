@@ -1,5 +1,11 @@
 import pygame
 
+class Particle():
+
+    def __init__(self, pos=(0, 0), size=15):
+        self.pos = pos
+        self.size = size
+        self.color = 'Green'
 
 def main():
     pygame.init()
@@ -14,7 +20,13 @@ def main():
                 running = False
         # TODO: some game logic
         # Render & Display 
-        screen.fill('Green')
+        black = pygame.Color(0, 0, 0)
+        screen.fill(black)
+        surf = pygame.Surface((30, 30))
+        green = pygame.Color(0, 255, 0)
+        surf.fill(green)
+        screen.blit(surf, (resolution[0]//2, resolution[1]//2))
+        pygame.display.flip()
     pygame.quit()
 
 
