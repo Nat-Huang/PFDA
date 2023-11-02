@@ -12,6 +12,12 @@ def main():
     pygame.display.set_caption("Digital Rain")
     resolution = (800, 600)
     screen = pygame.display.set_mode(resolution)
+    particle = Particle()
+    particle2 = Particle(pos=(2, 2))
+    print(particle.pos)
+    print(particle2.pos)
+    particle.pos = (3, 4)
+    print(particle.pos)
     running = True
     while running:
         # Event Loop
