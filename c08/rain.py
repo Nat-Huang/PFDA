@@ -5,11 +5,14 @@ import math
 
 class Particle():
 
-    def __init__(self, pos=(0, 0), size=15):
+    def __init__(self, pos=(0, 0), size=15, life=1000):
         self.pos = pos
         self.size = size
         self.color = pygame.Color(0, 255, 0)
         self.age = 0 # in milliseconds
+        self.life = life # in milliseconds
+        self.dead = False
+        self.alpha = 255
         self.surface = self.update_surface()
 
     def update(self, dt):
